@@ -14,10 +14,9 @@ namespace MvcWeb4.Controllers
              ViewBag.list1 = new SelectListItem[]{
              new SelectListItem(){Text="İstanbul", Value="i1"},
              new SelectListItem(){Text="Ankara", Value="a1"},
-             new SelectListItem(){Text="İzmir", Value="i2"}
-
-
-
+             new SelectListItem(){Text="İzmir", Value="i2"},
+             new SelectListItem(){Text="Antalya", Value="a1"},
+             new SelectListItem(){Text="Çanakkale", Value="c1"}
             };
 
             return View();
