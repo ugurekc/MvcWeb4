@@ -15,6 +15,10 @@ namespace MvcWeb4.Controllers
              new SelectListItem(){Text="İstanbul", Value="i1"},
              new SelectListItem(){Text="Ankara", Value="a1"},
              new SelectListItem(){Text="İzmir", Value="i2"}
+
+
+
+
             };
 
             return View();
