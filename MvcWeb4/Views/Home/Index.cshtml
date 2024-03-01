@@ -5,14 +5,8 @@
 }
 
 <main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-    </section>
-
     <div class="row">
-        <div style="margin-top:20px;">
+        <div class="col-md-3">
             @using (Html.BeginForm())
             {
 
@@ -25,19 +19,20 @@
                 <input type="submit" text="Submit" value="send" />
             }
         </div>
+    </div>
 
-        <div style="margin-top:20px;">
+    <div class="row">
+
+        <div class="col-md-5">
             <b>Ad-Soyad:</b> @Model.p1.name @Model.p1.surname<br />
             <b>Yaş:</b> @Model.p1.age
-        </div>
-
-        <div style="margin-top:20px;">
+            <hr />
             <b>Adres Tanımı:</b> @Model.a1.definition<br />
             <b>Şehir:</b> @Model.a1.city<br />
             <b>Ülke:</b> @Model.a1.country
         </div>
 
-        <div style="margin-top:20px;">
+        <div class="col-md-6">
             @using (Html.BeginForm())
             {
 
@@ -51,6 +46,6 @@
                 <input type="submit" text="Submit" value="send" />
             }
         </div>
-
+        
     </div>
 </main>

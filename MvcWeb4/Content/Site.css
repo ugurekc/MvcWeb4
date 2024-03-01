@@ -18,3 +18,14 @@ select,
 textarea {
     max-width: 280px;
 }
+.col-md-5 {
+    background-color:#e6e6e6;
+}
+.col-md-6 {
+    background-color:lightgreen;
+}
+.row div{
+    border-radius:10px;
+    padding:10px;
+    margin:5px;
+}
