@@ -1,4 +1,6 @@
-﻿@{
+﻿@model MvcWeb4.ViewModels.HomeViewModel
+
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -10,18 +12,45 @@
     </section>
 
     <div class="row">
-        @using (Html.BeginForm())
-        {
+        <div style="margin-top:20px;">
+            @using (Html.BeginForm())
+            {
 
-            @Html.TextBox("text1")
-            <br />
-            @Html.CheckBox("check1")
-            <br />
-            @Html.DropDownList("list1")
-            <hr />
-           <input type="submit" text="Submit" value="send"/> 
+                @Html.TextBox("text1")
+                <br />
+                @Html.CheckBox("check1")
+                <br />
+                @Html.DropDownList("list1")
+                <hr />
+                <input type="submit" text="Submit" value="send" />
+            }
+        </div>
 
-        }
+        <div style="margin-top:20px;">
+            <b>Ad-Soyad:</b> @Model.p1.name @Model.p1.surname<br />
+            <b>Yaş:</b> @Model.p1.age
+        </div>
+
+        <div style="margin-top:20px;">
+            <b>Adres Tanımı:</b> @Model.a1.definition<br />
+            <b>Şehir:</b> @Model.a1.city<br />
+            <b>Ülke:</b> @Model.a1.country
+        </div>
+
+        <div style="margin-top:20px;">
+            @using (Html.BeginForm())
+            {
+
+                <b>Ad-Soyad:</b> @Html.TextBoxFor(x => x.p1.name) @Html.TextBoxFor(x => x.p1.surname)<br />
+                <b>Yaş:</b> @Html.TextBoxFor(x => x.p1.age)
+                <hr />
+                <b>Adres Tanımı:</b> @Html.TextBoxFor(x => x.a1.definition)<br />
+                <b>Şehir:</b> @Html.TextBoxFor(x => x.a1.city)<br />
+                <b>Ülke:</b> @Html.TextBoxFor(x => x.a1.country)
+                <hr />
+                <input type="submit" text="Submit" value="send" />
+            }
+        </div>
 
     </div>
 </main>
